@@ -14,7 +14,7 @@ export default function Hero() {
         >
           {/* 무료 스톡 비디오 샘플 (병원/의료/clean 관련 느낌) */}
           <source
-            src="https://videos.pexels.com/video-files/3252038/3252038-hd_1920_1080_25fps.mp4"
+            src="https://d21utfn33skkhq.cloudfront.net/media/culiver/7dd8ceb1c0684b599666250fae7f2eb9.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
