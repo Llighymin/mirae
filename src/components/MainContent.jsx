@@ -48,7 +48,7 @@ export default function MainContent() {
               </h2>
             </div>
             <div className="hidden lg:block pb-2">
-              <a href="#" className="flex items-center text-[#666] font-medium hover:text-primary-600 transition-colors group text-sm border-b border-transparent hover:border-primary-600 pb-1">
+              <a href="#" className="flex items-center text-[#444] font-medium hover:text-primary-600 transition-colors group text-sm border-b border-transparent hover:border-primary-600 pb-1">
                 전체 진료과 보기
                 <i className="ri-arrow-right-line ml-2 transform group-hover:translate-x-1 transition-transform"></i>
               </a>
@@ -81,7 +81,7 @@ export default function MainContent() {
                   
                   <div className="w-10 h-[2px] bg-gray-200 mb-4 group-hover:bg-primary-600 transition-colors duration-300"></div>
                   
-                  <p className="text-[15px] text-[#666] leading-relaxed break-keep font-medium group-hover:text-[#444] transition-colors">
+                  <p className="text-[15px] text-[#444] leading-relaxed break-keep font-medium group-hover:text-[#222] transition-colors">
                     {center.description}
                   </p>
                 </div>

@@ -88,6 +88,24 @@
   outline-offset: 2px;
 }
 
+/* Skip link styles: visually hidden until focused */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  z-index: 9999;
+}
+
 /* 선택 영역 스타일 */
 ::selection {
   background-color: #0054A6;

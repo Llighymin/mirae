@@ -55,7 +55,7 @@ export default function ConsultationSection() {
                 <h3 className="text-xl font-bold text-[#222] mb-3 group-hover:text-primary-600 transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-[#666] leading-relaxed whitespace-pre-line text-[15px] font-medium group-hover:text-[#444]">
+                <p className="text-[#444] leading-relaxed whitespace-pre-line text-[15px] font-medium group-hover:text-[#222]">
                   {item.desc}
                 </p>
 
@@ -74,31 +74,31 @@ export default function ConsultationSection() {
         </div>
         
         {/* Banner Section below cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-           <div className="bg-[#2c3e50] rounded-2xl p-8 flex items-center justify-between text-white shadow-lg group hover:shadow-xl transition-all cursor-pointer overflow-hidden relative">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="#" aria-label="진료시간 안내 자세히 보기" className="bg-[#2c3e50] rounded-2xl p-8 flex items-center justify-between text-white shadow-lg group hover:shadow-xl transition-all overflow-hidden relative">
               <div className="relative z-10">
-                 <h4 className="text-2xl font-bold mb-2">진료시간 안내</h4>
-                 <p className="text-gray-300 mb-4 text-sm">평일 09:00 ~ 18:00 / 토요일 09:00 ~ 13:00</p>
-                 <span className="inline-block border border-white/30 rounded-full px-4 py-1 text-xs text-gray-200 group-hover:bg-white group-hover:text-[#2c3e50] transition-colors">자세히 보기</span>
+                <h4 className="text-2xl font-bold mb-2">진료시간 안내</h4>
+                <p className="text-gray-300 mb-4 text-sm">평일 09:00 ~ 18:00 / 토요일 09:00 ~ 13:00</p>
+                <span className="inline-block border border-white/30 rounded-full px-4 py-1 text-xs text-gray-200 group-hover:bg-white group-hover:text-[#2c3e50] transition-colors">자세히 보기</span>
               </div>
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform relative z-10">
-                 <i className="ri-time-line text-3xl"></i>
+                <i className="ri-time-line text-3xl"></i>
               </div>
               <i className="ri-time-line text-[150px] absolute -right-4 -bottom-8 text-white/5 rotate-12 group-hover:rotate-0 transition-all duration-500"></i>
-           </div>
+            </a>
 
-           <div className="bg-primary-600 rounded-2xl p-8 flex items-center justify-between text-white shadow-lg group hover:shadow-xl transition-all cursor-pointer overflow-hidden relative">
+            <a href="#" aria-label="지도 보기" className="bg-primary-600 rounded-2xl p-8 flex items-center justify-between text-white shadow-lg group hover:shadow-xl transition-all overflow-hidden relative">
               <div className="relative z-10">
-                 <h4 className="text-2xl font-bold mb-2">찾아오시는 길</h4>
-                 <p className="text-primary-100 mb-4 text-sm">광주광역시 서구 상무대로 771 3층</p>
-                 <span className="inline-block border border-white/30 rounded-full px-4 py-1 text-xs text-primary-100 group-hover:bg-white group-hover:text-primary-600 transition-colors">지도 보기</span>
+                <h4 className="text-2xl font-bold mb-2">찾아오시는 길</h4>
+                <p className="text-primary-100 mb-4 text-sm">광주광역시 서구 상무대로 771 3층</p>
+                <span className="inline-block border border-white/30 rounded-full px-4 py-1 text-xs text-primary-100 group-hover:bg-white group-hover:text-primary-600 transition-colors">지도 보기</span>
               </div>
-               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform relative z-10">
-                 <i className="ri-map-pin-line text-3xl"></i>
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform relative z-10">
+                <i className="ri-map-pin-line text-3xl"></i>
               </div>
               <i className="ri-map-pin-line text-[150px] absolute -right-4 -bottom-8 text-white/5 rotate-12 group-hover:rotate-0 transition-all duration-500"></i>
-           </div>
-        </div>
+            </a>
+          </div>
       </div>
     </section>
   );

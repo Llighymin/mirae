@@ -30,7 +30,7 @@ export default function NoticeBoard() {
               <h2 className="text-2xl font-bold text-[#222]">
                 미래와희망 <span className="text-primary-600">소식</span>
               </h2>
-              <a href="#" className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white hover:border-transparent transition-all">
+              <a href="#" aria-label="공지 추가" className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white hover:border-transparent transition-all">
                 <i className="ri-add-line"></i>
               </a>
             </div>
@@ -58,8 +58,8 @@ export default function NoticeBoard() {
             {/* List */}
             <ul className="space-y-4">
               {notices.map((notice, index) => (
-                <li key={index} className="flex items-center justify-between group cursor-pointer">
-                  <div className="flex items-center w-full overflow-hidden">
+                <li key={index} className="flex items-center justify-between group">
+                  <a href="#" className="flex items-center w-full overflow-hidden">
                     <span className={`w-1.5 h-1.5 rounded-full mr-3 flex-shrink-0 ${notice.isNew ? 'bg-primary-500' : 'bg-gray-300 group-hover:bg-primary-400 transition-colors'}`}></span>
                     <p className="text-[15px] text-[#444] group-hover:text-primary-600 group-hover:underline transition-all truncate pr-4 flex-1">
                       {notice.title}
@@ -67,7 +67,7 @@ export default function NoticeBoard() {
                     {notice.isNew && (
                       <span className="text-[10px] font-bold text-white bg-red-500 px-1.5 py-0.5 rounded ml-2 flex-shrink-0">N</span>
                     )}
-                  </div>
+                  </a>
                   <span className="text-[13px] text-[#888] font-medium flex-shrink-0">{notice.date}</span>
                 </li>
               ))}
@@ -109,7 +109,7 @@ export default function NoticeBoard() {
                  <h3 className="text-lg font-bold text-white mb-1">뉴스레터 구독하기</h3>
                  <p className="text-primary-200 text-sm">건강한 임신과 출산을 위한 정보를 받아보세요.</p>
                </div>
-               <button className="relative z-10 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white hover:bg-primary-400 transition-colors shadow-lg group-hover:scale-110">
+               <button aria-label="뉴스레터 구독" className="relative z-10 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white hover:bg-primary-400 transition-colors shadow-lg group-hover:scale-110">
                  <i className="ri-mail-send-line text-xl"></i>
                </button>
             </div>

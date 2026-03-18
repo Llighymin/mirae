@@ -36,7 +36,7 @@ export default function Header() {
       <div className="bg-[#f8f9fa] border-b border-[#e9ecef] hidden md:block">
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-9">
-            <div className="flex items-center space-x-6 text-[11px] text-[#666]">
+            <div className="flex items-center space-x-6 text-[11px] text-[#444]">
               <span className="flex items-center cursor-pointer hover:text-primary-600 transition-colors">
                 <i className="ri-hospital-line mr-1.5 text-[#999]"></i>
                 병원소개
@@ -50,7 +50,7 @@ export default function Header() {
                 062-361-3344
               </span>
             </div>
-            <div className="flex items-center divide-x divide-[#e9ecef] text-[11px] text-[#666]">
+            <div className="flex items-center divide-x divide-[#e9ecef] text-[11px] text-[#444]">
               <a href="#" className="px-3 hover:text-primary-600 transition-colors">로그인</a>
               <a href="#" className="px-3 hover:text-primary-600 transition-colors">회원가입</a>
               <div className="flex items-center px-3 space-x-1">
@@ -70,7 +70,7 @@ export default function Header() {
         <div className="max-w-[1400px] mx-auto px-4 lg:px-8 h-full">
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
-            <Link href="/" className="flex items-center flex-shrink-0 mr-8 lg:mr-12">
+            <Link href="/" aria-label="홈으로 이동" className="flex items-center flex-shrink-0 mr-8 lg:mr-12">
                {/* 
                   로고 이미지 경로가 확실하지 않으므로 텍스트로 대체하거나 placeholder 사용 권장
                   Use text logo temporarily if image fails, or use standard image tag
@@ -126,7 +126,7 @@ export default function Header() {
             {/* Right Actions */}
             <div className="flex items-center space-x-1 lg:space-x-3 ml-auto xl:ml-8 flex-shrink-0">
               {/* Search Icon */}
-              <button className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center rounded-full text-[#333] hover:bg-[#f8f9fa] transition-colors">
+              <button aria-label="검색" className="w-9 h-9 lg:w-10 lg:h-10 flex items-center justify-center rounded-full text-[#333] hover:bg-[#f8f9fa] transition-colors">
                 <i className="ri-search-line text-xl"></i>
               </button>
 
@@ -155,9 +155,10 @@ export default function Header() {
           <div className="fixed inset-0 bg-white z-[9999] overflow-y-auto w-screen h-screen">
             <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-8 h-full flex flex-col">
               <div className="flex justify-between items-center mb-12 border-b border-gray-100 pb-6 flex-shrink-0">
-                <img src="https://miraeheemang.com/images/index/logo.png" alt="Logo" className="h-10" />
+                <img src="https://miraeheemang.com/images/index/logo.png" alt="미래와희망" className="h-10" />
                 <button 
                   onClick={() => setIsMenuOpen(false)}
+                  aria-label="메뉴 닫기"
                   className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center hover:bg-gray-100 transition-colors"
                 >
                   <i className="ri-close-line text-2xl"></i>

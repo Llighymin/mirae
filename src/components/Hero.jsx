@@ -1,6 +1,11 @@
 'use client';
 
 export default function Hero() {
+  const scrollToMain = () => {
+    const el = document.getElementById('main-content');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative w-full h-[600px] lg:h-[800px] bg-gray-900 overflow-hidden">
       {/* Background Video */}
@@ -17,6 +22,7 @@ export default function Hero() {
             src="https://d21utfn33skkhq.cloudfront.net/media/culiver/7dd8ceb1c0684b599666250fae7f2eb9.mp4"
             type="video/mp4"
           />
+          <track kind="captions" src="/captions/hero-ko.vtt" srcLang="ko" label="한국어 자막" default />
           Your browser does not support the video tag.
         </video>
         {/* Dark Overlay for Text Readability - slightly heavier for video */}
@@ -45,7 +51,7 @@ export default function Hero() {
               온라인 상담 바로가기
               <i className="ri-arrow-right-line ml-2 transform group-hover:translate-x-1 transition-transform"></i>
             </a>
-            <a href="#" className="w-14 h-14 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-primary-900 transition-all group">
+            <a href="#" aria-label="동영상 재생" className="w-14 h-14 rounded-full border border-white/20 bg-white/5 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-primary-900 transition-all group">
               <i className="ri-play-fill text-xl group-hover:scale-110 transition-transform pl-1"></i>
             </a>
           </div>
@@ -53,10 +59,10 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20 text-white/50 flex flex-col items-center animate-bounce cursor-pointer hover:text-white transition-colors">
+      <button onClick={scrollToMain} aria-label="아래로 스크롤" className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20 text-white/50 flex flex-col items-center animate-bounce hover:text-white transition-colors">
         <span className="text-[10px] tracking-[0.3em] mb-3 uppercase font-medium">Scroll Down</span>
         <i className="ri-arrow-down-line text-xl"></i>
-      </div>
+      </button>
     </section>
   );
 }
