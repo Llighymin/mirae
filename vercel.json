@@ -1,8 +1,6 @@
 {
   "regions": ["icn1"],
-  "functions": {
-    "api/**/*.js": { "regions": ["icn1"] }
-  },
+  "outputDirectory": "out",
   "headers": [
     {
       "source": "/(.*)",
