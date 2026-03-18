@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html --view",
+    "lighthouse:ci": "lighthouse http://localhost:3000 --output json --output-path ./lighthouse-report.json --chrome-flags='--headless'",
+    "lighthouse:all": "lighthouse http://localhost:3000 --output html --output json --output-path ./lighthouse-report --chrome-flags='--headless'"
   },
   "dependencies": {
     "@remixicon/react": "^4.9.0",
