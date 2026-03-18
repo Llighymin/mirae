@@ -1,6 +1,5 @@
 {
   "regions": ["icn1"],
-  "outputDirectory": "out",
   "headers": [
     {
       "source": "/(.*)",
